@@ -32,7 +32,9 @@ namespace WPF_Classes
         }
         public string GetAisle()
         {
-            return $"{Manufacturer.ToUpper()[0]}{Price.ToString("N0")}";
+            string price = Convert.ToString(Price);
+            price = price.Replace(".", "");
+            return $"{Name} can be found on aisle {Manufacturer.ToUpper()[0]}{price}";
         }
         public override string ToString()
         {

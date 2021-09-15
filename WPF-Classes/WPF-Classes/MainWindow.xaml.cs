@@ -73,7 +73,21 @@ namespace WPF_Classes
             txtName.Clear();
             txtPrice.Clear();
 
+            Toy selectedToy = (Toy)lstToys.SelectedItem;
 
         }
+
+        private void lstToys_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Toy selectedToy = (Toy)lstToys.SelectedItem;
+            MessageBox.Show(selectedToy.GetAisle());
+            
+         //Program breaks here. I tried to do research on it but everything I found talked about a "PictureBox rather than an Image tool"
+            //var uri = new Uri(txtImage.Text);
+            //var img = new BitmapImage(uri);
+            //imgImage.Source = img;
+           
+        }
+
     }
 }
