@@ -18,7 +18,7 @@
         <TextBox x:Name="txtImage" HorizontalAlignment="Left" Margin="152,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" FontSize="14" Height="29"/>
         <ListBox x:Name="lstToys" Margin="366,86,43,211" MouseDoubleClick="lstToys_MouseDoubleClick"/>
         <Label Content="Toy Store" HorizontalAlignment="Left" Margin="343,28,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <Image x:Name="imgImage" HorizontalAlignment="Left" Height="178" Margin="366,228,0,0" VerticalAlignment="Top" Width="390"/>
+        <Image x:Name="imgToy" HorizontalAlignment="Left" Height="178" Margin="366,228,0,0" VerticalAlignment="Top" Width="390"/>
 
     </Grid>
 </Window>

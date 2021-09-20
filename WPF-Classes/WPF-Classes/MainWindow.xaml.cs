@@ -50,12 +50,13 @@ namespace WPF_Classes
             if (double.TryParse(txtPrice.Text, out price) == false)
             {
                 isEverythingGood = false;
+                txtPrice.Text = string.Empty;
                 MessageBox.Show("You must enter a valid price");
             }
 
             if (isEverythingGood == false)
             {
-                return;
+                return; //stop processing method so user can go fix issues
             }
 
             Toy toy = new Toy()
@@ -65,6 +66,7 @@ namespace WPF_Classes
                 Price = price,
                 Image = txtImage.Text,
             };
+            //can also type "toy.Image = txtImage.Text;" for each rather than use brackets
 
             lstToys.Items.Add(toy);
 
@@ -73,7 +75,7 @@ namespace WPF_Classes
             txtName.Clear();
             txtPrice.Clear();
 
-            Toy selectedToy = (Toy)lstToys.SelectedItem;
+           // Toy selectedToy = (Toy)lstToys.SelectedItem;
 
         }
 
@@ -82,10 +84,9 @@ namespace WPF_Classes
             Toy selectedToy = (Toy)lstToys.SelectedItem;
             MessageBox.Show(selectedToy.GetAisle());
             
-         //Program breaks here. I tried to do research on it but everything I found talked about a "PictureBox rather than an Image tool"
-            //var uri = new Uri(txtImage.Text);
-            //var img = new BitmapImage(uri);
-            //imgImage.Source = img;
+            var uri = new Uri(selectedToy.Image); //struggled with what goes in parenthesis here
+            var img = new BitmapImage(uri);
+            imgToy.Source = img;
            
         }
 
