@@ -11,7 +11,6 @@ namespace Contact_List
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Photo { get; set; }
-
         public Contact()
         {
             Id = 0;
@@ -24,7 +23,7 @@ namespace Contact_List
         {
             var pieces = line.Split('|');
 
-            Id = 0;
+            Id = Convert.ToInt32(pieces[0]);
             FirstName = pieces[1];
             LastName = pieces[2];
             Email = pieces[3];

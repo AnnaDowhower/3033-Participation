@@ -51,8 +51,14 @@ namespace Contact_List
             txtFname.Text = selectedPerson.FirstName;
             txtLname.Text = selectedPerson.LastName;
             txtEmail.Text = selectedPerson.Email;
+            lblID.Content = selectedPerson.Id;
 
             imgPhoto.Source = new BitmapImage(new Uri(selectedPerson.Photo));
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            lblID.Content = "";
         }
     }
 }

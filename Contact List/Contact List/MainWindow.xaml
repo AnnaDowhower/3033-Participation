@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Contact_List"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Contacts" Height="450" Width="800">
     <Grid Background="#FF94C882">
         <ListBox x:Name="lstContacts" Margin="455,51,33,118" Background="#FFD8F5D2" Foreground="#FF6C6B6B"/>
         <TextBox x:Name="txtFname" HorizontalAlignment="Left" Margin="82,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
@@ -16,6 +16,8 @@
         <Label Content="Email" HorizontalAlignment="Left" Margin="198,126,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.434,-0.037"/>
         <Image x:Name="imgPhoto" HorizontalAlignment="Left" Height="193" Margin="82,191,0,0" VerticalAlignment="Top" Width="271"/>
         <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="573,352,0,0" VerticalAlignment="Top" Height="28" Width="76" FontSize="16" IsDefault="True" Click="btnSubmit_Click"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="689,352,0,0" VerticalAlignment="Top" Height="34" Width="53" Click="btnClear_Click"/>
+        <Label x:Name="lblID" Content="" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" IsEnabled="False" FontSize="22" Foreground="#FF212335" FontWeight="Bold"/>
 
     </Grid>
 </Window>
