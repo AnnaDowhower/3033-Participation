@@ -9,9 +9,9 @@
     <Grid Background="#FFBF2323">
         <ComboBox x:Name="cboCategory" HorizontalAlignment="Left" Margin="87,89,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="Choose a category" HorizontalAlignment="Left" Margin="63,57,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="MingLiU_HKSCS-ExtB" FontWeight="Bold" RenderTransformOrigin="0.164,0.677"/>
-        <Rectangle Height="295" Margin="377,73,50,0" Stroke="Black" VerticalAlignment="Top" Fill="#FFB49797"/>
-        <Label x:Name="lblJoke" Content="" HorizontalAlignment="Left" Margin="400,89,0,0" VerticalAlignment="Top" Height="260" Width="325" FontFamily="MingLiU_HKSCS-ExtB" FontSize="24"/>
-        <Button x:Name="btnGetJoke" Content="Get Joke" HorizontalAlignment="Left" Margin="87,299,0,0" VerticalAlignment="Top" Height="50" Width="144" Background="#FF150505" Foreground="#FFFCF8F8" FontSize="20" FontFamily="MingLiU_HKSCS-ExtB" FontWeight="Bold" IsDefault="True" Click="btnGetJoke_Click"/>
+        <Rectangle Height="360" Margin="272,0,41,0" Stroke="Black" VerticalAlignment="Center" Fill="#FFB49797"/>
+        <Button x:Name="btnGetJoke" Content="Get Joke" HorizontalAlignment="Left" Margin="75,299,0,0" VerticalAlignment="Top" Height="50" Width="144" Background="#FF150505" Foreground="#FFFCF8F8" FontSize="20" FontFamily="MingLiU_HKSCS-ExtB" FontWeight="Bold" IsDefault="True" Click="btnGetJoke_Click"/>
+        <TextBlock x:Name="blkJoke" HorizontalAlignment="Left" Margin="299,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="305" Width="437" FontFamily="MingLiU_HKSCS-ExtB" FontSize="16" FontWeight="Bold"/>
 
     </Grid>
 </Window>

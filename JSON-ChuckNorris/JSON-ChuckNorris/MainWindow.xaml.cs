@@ -47,16 +47,24 @@ namespace JSON_ChuckNorris
 
         private void btnGetJoke_Click(object sender, RoutedEventArgs e)
         {
-            string cat = cboCategory.SelectedItem.ToString();
-            string url = $"https://api.chucknorris.io/jokes/random?category={cat}";
+
             
+            string cat = cboCategory.SelectedValue.ToString();
+            string url = "https://api.chucknorris.io/jokes/random?category=";
+            url += cat;
+
+            if (cat.ToLower() == "all")
+            {
+                url = "https://api.chucknorris.io/jokes/random";
+            }
+
             using (var client = new HttpClient())
             {
-                string joke = client.GetStringAsync($"{url}").Result;
+                string json = client.GetStringAsync(url).Result;
 
-                var result = JsonConvert.DeserializeObject<Result>(joke);
+                Result result = JsonConvert.DeserializeObject<Result>(json);
 
-                lblJoke.Content = result;
+                blkJoke.Text = result.value;
             }
         }
     }
