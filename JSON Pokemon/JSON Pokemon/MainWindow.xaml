@@ -7,13 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ComboBox x:Name="cboPokemon" HorizontalAlignment="Left" Margin="75,95,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnChoose" Content="Choose pokemon!" HorizontalAlignment="Left" Margin="78,286,0,0" VerticalAlignment="Top" Height="37" Width="117" IsDefault="True"/>
-        <TextBlock x:Name="blkWeight" HorizontalAlignment="Left" Margin="538,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="139" Background="#FFC8C4C4"/>
-        <Label Content="Weight:" HorizontalAlignment="Left" Margin="583,41,0,0" VerticalAlignment="Top"/>
-        <Label Content="Height:" HorizontalAlignment="Left" Margin="583,110,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="blkHeight" HorizontalAlignment="Left" Margin="539,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="139" Background="#FFC6C0C0"/>
-        <Image x:Name="imgSprite" HorizontalAlignment="Left" Height="187" Margin="508,217,0,0" VerticalAlignment="Top" Width="225"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Pokemon.jfif"/>
+        </Grid.Background>
+        <ComboBox x:Name="cboPokemon" HorizontalAlignment="Left" Margin="644,48,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnChoose" Content="Choose pokemon!" HorizontalAlignment="Left" Margin="647,251,0,0" VerticalAlignment="Top" Height="37" Width="117" IsDefault="True" Click="btnChoose_Click"/>
+        <TextBlock x:Name="blkWeight" HorizontalAlignment="Left" Margin="366,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="138" Background="#FFC8C4C4"/>
+        <Label Content="Weight:" HorizontalAlignment="Left" Margin="409,22,0,0" VerticalAlignment="Top"/>
+        <Label Content="Height:" HorizontalAlignment="Left" Margin="409,91,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="blkHeight" HorizontalAlignment="Left" Margin="365,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="140" Background="#FFC6C0C0"/>
+        <Image x:Name="imgSprite" HorizontalAlignment="Left" Height="187" Margin="112,117,0,0" VerticalAlignment="Top" Width="225"/>
+        <Button x:Name="btnToggle" Content="Toggle" HorizontalAlignment="Left" Margin="175,359,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="btnToggle_Click"/>
 
     </Grid>
 </Window>
