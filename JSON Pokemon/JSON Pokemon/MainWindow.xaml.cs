@@ -67,6 +67,11 @@ namespace JSON_Pokemon
 
                     imgSprite.Source = new BitmapImage(new Uri(poke.sprites.front_default));
                     showFront = false;
+
+                    string HEIGHT = poke.height.ToString();
+                    blkHeight.Text = HEIGHT;
+                    string WEIGHT = poke.weight.ToString();
+                    blkWeight.Text = WEIGHT;
                 }
             }
         }
