@@ -51,14 +51,14 @@ namespace GOTQuote
 
             if (quotes.Count() < 1)
             {
-                MessageBox.Show("There was an error creating your file");
+                MessageBox.Show("You must generate a quote to create a file");
             }
             else
             {
                 string json2 = JsonConvert.SerializeObject(quotes);
                 File.WriteAllText("GOT_Quotes.json", json2);
 
-                MessageBox.Show("Your file \"GOT_Quotes.json\" was created");
+                MessageBox.Show("Your file \"GOT_Quotes.json\" was created!");
             }
 
         }
