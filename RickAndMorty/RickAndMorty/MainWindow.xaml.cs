@@ -30,22 +30,32 @@ namespace JSON_RickAndMorty
 
             using (var client = new HttpClient())
             {
+                string url = "https://rickandmortyapi.com/api/character";
 
-                string jsonData = client.GetStringAsync("https://rickandmortyapi.com/api/character").Result;
-                RickAndMortyAPI api = JsonConvert.DeserializeObject<RickAndMortyAPI>(jsonData);
-
-                int page = api.pages;
-                for (int i = 0; i < page; i++)
+                while (url!=null)
                 {
-                    string jsonData2 = client.GetStringAsync($"https://rickandmortyapi.com/api/character?page={i}").Result;
-                    RickAndMortyAPI api2 = JsonConvert.DeserializeObject<RickAndMortyAPI>(jsonData2);
+                    string jsonData = client.GetStringAsync(url).Result;
+                    RickAndMortyAPI api = JsonConvert.DeserializeObject<RickAndMortyAPI>(jsonData);
 
-                    //api2.pages = i;
-                    foreach (Character item in api2.results)
+                    foreach (Character item in api.results)
                     {
                         cboCharacters.Items.Add(item);
                     }
+                    url = api.info.next;
                 }
+
+               // for (int i = 0; i < 35; i++)
+               // {
+               //     string jsonData2 = client.GetStringAsync($"https://rickandmortyapi.com/api/character?page={i}").Result;
+               //     RickAndMortyAPI api2 = JsonConvert.DeserializeObject<RickAndMortyAPI>(jsonData2);
+               //
+               //     //api2.pages = i;
+               //     foreach (Character item in api2.results)
+               //     {
+               //         cboCharacters.Items.Add(item);
+               //     }
+               // }
+
             }
 
         }
