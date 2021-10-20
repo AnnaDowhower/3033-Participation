@@ -11,6 +11,7 @@
         <Label Content="Platforms" HorizontalAlignment="Left" Margin="87,84,0,0" VerticalAlignment="Top" FontSize="20"/>
         <ListBox x:Name="lstGames" Margin="280,62,31,36" Background="#FF80E58E" SelectionChanged="lstGames_SelectionChanged"/>
         <Label Content="Games" HorizontalAlignment="Left" Margin="489,20,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Button x:Name="btnExport" Content="Export" HorizontalAlignment="Left" Margin="96,343,0,0" VerticalAlignment="Top" Click="btnExport_Click" Height="32" Width="76"/>
 
     </Grid>
 </Window>

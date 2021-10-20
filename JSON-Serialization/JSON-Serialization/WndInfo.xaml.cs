@@ -17,11 +17,21 @@ namespace JSON_Serialization
     /// </summary>
     public partial class WndInfo : Window
     {
-        public WndInfo()
+        public WndInfo(Platform chosen)
         {
             InitializeComponent();
 
-            //txtInfo = Name.Games;
+        }
+        public void SetupWindow(Platform chosen)
+        {
+            this.Title = chosen.Name;
+            txtName.Text = chosen.Name;
+            txtPlatform.Text = chosen.platform;
+            txtReleaseDate.Text = chosen.ReleaseDate.ToString();
+            txtSummary.Text = chosen.Summary;
+            txtMetaScore.Text = chosen.MetaScore.ToString();
+            txtUserReview.Text = chosen.UserReview;
+
         }
     }
 }

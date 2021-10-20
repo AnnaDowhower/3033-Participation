@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -84,8 +85,9 @@ namespace JSON_Serialization
 
         private void lstGames_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            WndInfo wnd = new WndInfo();
-
+            Platform chosen = (Platform)lstGames.SelectedItem;
+            WndInfo wnd = new WndInfo(chosen);
+            wnd.SetupWindow(chosen);
             wnd.Show();
         }
         private void UpdateDataForFilter()
@@ -103,6 +105,12 @@ namespace JSON_Serialization
         private void cboPlatforms_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             UpdateDataForFilter();
+        }
+
+        private void btnExport_Click(object sender, RoutedEventArgs e)
+        {
+            string json = JsonConvert.SerializeObject(lstGames.Items, Formatting.Indented);
+            File.WriteAllText($"{cboPlatforms.SelectedValue.ToString()}_games.json", json);
         }
     }
 }
