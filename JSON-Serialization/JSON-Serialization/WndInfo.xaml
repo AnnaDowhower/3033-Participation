@@ -7,14 +7,14 @@
         mc:Ignorable="d"
         Title="Game" Height="450" Width="800">
     <Grid Background="#FF8ACF6A">
-        <TextBlock x:Name="txtName" HorizontalAlignment="Left" Margin="111,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="200" FontSize="18"/>
+        <TextBlock x:Name="txtName" HorizontalAlignment="Left" Margin="111,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="348" FontSize="18"/>
         <Label Content="Name:" HorizontalAlignment="Left" Margin="24,20,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
-        <Label Content="Platform:" HorizontalAlignment="Left" Margin="448,20,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Platform:" HorizontalAlignment="Left" Margin="465,20,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
         <Label Content="Release Date:" HorizontalAlignment="Left" Margin="24,54,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
         <Label Content="Summary: " HorizontalAlignment="Left" Margin="24,156,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
         <Label Content="Meta Score: " HorizontalAlignment="Left" Margin="25,88,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
         <Label Content="User Review:" HorizontalAlignment="Left" Margin="22,122,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
-        <TextBlock x:Name="txtPlatform" HorizontalAlignment="Left" Margin="554,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="200" FontSize="18"/>
+        <TextBlock x:Name="txtPlatform" HorizontalAlignment="Left" Margin="571,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="200" FontSize="18"/>
         <TextBlock x:Name="txtReleaseDate" HorizontalAlignment="Left" Margin="172,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="200" FontSize="18"/>
         <TextBlock x:Name="txtSummary" HorizontalAlignment="Left" Margin="130,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="232" Width="624" FontSize="18"/>
         <TextBlock x:Name="txtMetaScore" HorizontalAlignment="Left" Margin="172,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="200" FontSize="18"/>
