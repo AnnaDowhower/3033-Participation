@@ -19,7 +19,7 @@ namespace MVC_beginner.Controllers
 
             using (var client = new HttpClient())
             {
-                var json = client.GetStringAsync("https://pokeapi.co/api/v2/pokemon?limit=0&offset=1200").Result;
+                var json = client.GetStringAsync("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1200").Result;
 
                 allpokemon = JsonConvert.DeserializeObject<PokemonAPI>(json);
             }

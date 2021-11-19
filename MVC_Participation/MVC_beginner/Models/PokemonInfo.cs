@@ -8,6 +8,7 @@ namespace MVC_beginner.Models
 {
     public class PokemonInfo
     {
+        public int id { get; set; }
         public int height { get; set; }
         public string name { get; set; }
         public int weight { get; set; }
